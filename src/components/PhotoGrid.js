@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from 'styled-components';
+import aloneLake from '../images/alone_lake.jpg'
+import blueBuildings from '../images/blue_buildings.jpg'
+import bridgeGolden from '../images/bridge_golden.jpg'
 
 //Stlyed Components
 const Container = styled.div`
@@ -48,9 +51,9 @@ class PhotoGrid extends React.Component {
   render(){
     return (
         <Container>
-            <Image src="src/images/alone_lake.jpg"onClick ={this.print.bind(this)}></Image>
-            <Image src="src/images/blue_buildings.jpg"></Image>
-            <Image src="src/images/bridge_golden.jpg"></Image>
+            <Image src={aloneLake} onClick ={this.print.bind(this)}></Image>
+            <Image src={blueBuildings}></Image>
+            <Image src={bridgeGolden}></Image>
 
 
             <Image src="src/images/cyber_punk.jpg"></Image>
