@@ -3,14 +3,30 @@ import React from "react";
 import ReactDOM from "react-dom";
 import PhotoGrid from "./components/PhotoGrid";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import styled from 'styled-components';
 import './components/fonts.js'
+import splash from '../src/images/splash.jpg';
 
 const PhotoContainer = styled.div`
+text-align:center;
 margin-left: auto;
 margin-right: auto;
-background-color:rgb(120, 136, 138) ;
+@media all and (max-width: 600px){
+  display: block;
+}
 `;
+
+const Splash = styled.img`
+text-align:center;
+margin-left: auto;
+margin-right: auto;
+@media all and (max-width: 600px){
+  width: 100%;
+
+}
+`;
+
 class Index extends React.Component {
   constructor(props){
     super(props);
@@ -32,8 +48,8 @@ class Index extends React.Component {
     return (
        <PhotoContainer>
          <Header/>
-         <PhotoGrid onChange ={this.clickHandler} />
-         <p>{this.state.clicks}</p>
+         <Splash src={splash} width= '1000px'></Splash>
+         <Footer/>
       </PhotoContainer>
     );
   }
