@@ -2,11 +2,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PhotoGrid from "./components/PhotoGrid";
-import Header from "./components/Header";
+import  Header from "./components/Header";
+import Home from "./components/Home";
 import Footer from "./components/Footer";
 import styled from 'styled-components';
 import './components/fonts.js'
 import splash from '../src/images/splash.jpg';
+import appCss from '../src/app.css'
 
 const PhotoContainer = styled.div`
 text-align:center;
@@ -14,16 +16,6 @@ margin-left: auto;
 margin-right: auto;
 @media all and (max-width: 600px){
   display: block;
-}
-`;
-
-const Splash = styled.img`
-text-align:center;
-margin-left: auto;
-margin-right: auto;
-@media all and (max-width: 600px){
-  width: 100%;
-
 }
 `;
 
@@ -48,7 +40,7 @@ class Index extends React.Component {
     return (
        <PhotoContainer>
          <Header/>
-         <Splash src={splash} width= '1000px'></Splash>
+         <Home/>
          <Footer/>
       </PhotoContainer>
     );

@@ -19,6 +19,10 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loader: "file-loader?name=/src/images/[name].[ext]"
       },
+      {
+       test: /\.css$/,
+       use: [ 'style-loader', 'css-loader' ]
+     }
     ]
   },
   plugins: [htmlPlugin]

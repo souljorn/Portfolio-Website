@@ -16,7 +16,7 @@ background-color: rgb(120, 136, 138);
 height: 120px;
 margin-left: auto;
 margin-right: auto;
-max-width: 1000px;
+
 
 @media all and (max-width: 600px){
 display: grid;
